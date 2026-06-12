@@ -34,7 +34,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+     origin: [
+      "http://localhost:3000",
+      "https://online-learning-plateform-frontend-o57ru20dq.vercel.app",
+    ],
     credentials: true,
   }),
 );
