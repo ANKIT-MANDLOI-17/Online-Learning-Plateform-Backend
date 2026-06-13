@@ -36,11 +36,13 @@ app.use(
   cors({
      origin: [
       "http://localhost:3000",
-      "https://online-learning-plateform-frontend-o57ru20dq.vercel.app",
+      "https://online-learning-plateform-frontend-qvhf7ex9q.vercel.app",
     ],
     credentials: true,
   }),
 );
+
+app.options("*", cors());
 
 app.use("/api/user", authRoute);
 app.use("/api/courses", auth, courseRoute);
